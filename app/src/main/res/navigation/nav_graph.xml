@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2022 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navGraph"
+    app:startDestination="@id/movieOverviewContainerFragment">
+
+    <fragment
+        android:id="@+id/movieOverviewContainerFragment"
+        android:name="com.atike.moviebrowser.movieoverview.MovieOverviewContainerFragment"
+        android:label="fragment_movie_overview_container"
+        tools:layout="@layout/fragment_movie_overview_container">
+        <action
+            android:id="@+id/actionShowMovieDetail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/actionShowMovieSearch"
+            app:destination="@+id/movieSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.atike.moviebrowser.moviedetail.MovieDetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_movie_detail">
+        <action
+            android:id="@+id/actionShowMovieSearch"
+            app:destination="@+id/movieSearchFragment" />
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieSearchFragment"
+        android:name="com.atike.moviebrowser.moviesearch.MovieSearchFragment"
+        android:label="fragment_movie_search"
+        tools:layout="@layout/fragment_movie_search">
+        <action
+            android:id="@+id/actionShowMovieDetail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/actionShowMovieSearch"
+            app:destination="@+id/movieSearchFragment" />
+        <argument
+            android:name="movieKeyword"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

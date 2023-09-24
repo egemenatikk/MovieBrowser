@@ -1,0 +1,25 @@
+/*
+ * Copyright 2022 Commencis. All Rights Reserved.
+ *
+ * Save to the extent permitted by law, you may not use, copy, modify,
+ * distribute or create derivative works of this material or any part
+ * of it without the prior written consent of Commencis.
+ * Any reproduction of this material must contain this notice.
+ */
+
+package com.atike.moviebrowser.moviedetail
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+
+class MovieDetailViewModelFactory(
+    private val movieId: Int?,
+) : ViewModelProvider.NewInstanceFactory() {
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(MovieDetailViewModel::class.java)) {
+            return MovieDetailViewModel(movieId) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel type")
+    }
+}

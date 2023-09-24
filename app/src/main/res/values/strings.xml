@@ -1,0 +1,33 @@
+<!--
+  ~ Copyright 2022 Commencis. All Rights Reserved.
+  ~
+  ~ Save to the extent permitted by law, you may not use, copy, modify,
+  ~ distribute or create derivative works of this material or any part
+  ~ of it without the prior written consent of Commencis.
+  ~ Any reproduction of this material must contain this notice.
+  -->
+
+<resources>
+    <string name="app_name">MovieBrowser</string>
+    <string name="upcoming">UPCOMING</string>
+    <string name="now_playing">NOW PLAYING</string>
+    <string name="popular">POPULAR</string>
+    <string name="top_rated">TOP RATED</string>
+    <string name="original_title">Original Title</string>
+    <string name="production_companies">Production Companies</string>
+    <string name="imdb_score">IMDB Score</string>
+    <string name="popularity">Popularity</string>
+    <string name="status">Status</string>
+    <string name="language">Language</string>
+    <string name="revenue">Revenue</string>
+    <string name="budget">Budget</string>
+    <string name="runtime">Runtime</string>
+    <string name="released">Released</string>
+    <string name="crew">Crew</string>
+    <string name="cast">Cast</string>
+    <string name="recommended_movies">Recommended Movies</string>
+    <string name="similar_movies">Similar Movies</string>
+    <string name="reviews">REVIEWS</string>
+    <string name="enter_a_keyword">Enter a keyword...</string>
+    <string name="search">Search</string>
+</resources>

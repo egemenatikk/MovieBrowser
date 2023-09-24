@@ -1,0 +1,25 @@
+/*
+ * Copyright 2022 Commencis. All Rights Reserved.
+ *
+ * Save to the extent permitted by law, you may not use, copy, modify,
+ * distribute or create derivative works of this material or any part
+ * of it without the prior written consent of Commencis.
+ * Any reproduction of this material must contain this notice.
+ */
+
+package com.atike.moviebrowser
+
+import android.widget.ImageView
+import androidx.core.net.toUri
+import androidx.databinding.BindingAdapter
+import coil.load
+
+@BindingAdapter("imageUrl")
+fun bindImage(imageView: ImageView, imageUrl: String?) {
+    imageUrl ?: return
+    val imageUri = imageUrl.toUri().buildUpon().build()
+    imageView.load(imageUri) {
+        placeholder(R.drawable.ic_launcher_foreground)
+        error(R.drawable.ic_launcher_background)
+    }
+}
